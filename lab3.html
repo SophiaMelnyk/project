@@ -4,29 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Лабораторна робота №2</title>
+    <title>Лабораторна робота №3</title>
     <link rel="icon" href="images/study.png">
     <link rel="stylesheet" href="styles/styles.css">
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const topicButton = document.getElementById("topicButton");
-            const connectstylesButton = document.getElementById("connectstylesButton");
+
+            const taskoneButton = document.getElementById("taskoneButton");
             const tagChooseButton = document.getElementById("tagChooseButton");
             const classChooseButton = document.getElementById("classChooseButton");
             const identifierChooseButton = document.getElementById("identifierChooseButton");
             const otherChooseButton = document.getElementById("otherChooseButton");
             const otherButton = document.getElementById("otherButton");
+
             const conclusionButton = document.getElementById("conclusionButton");
             const content = document.querySelector(".content");
             
             topicButton.addEventListener("click", function () {
-                content.innerHTML = '<h3>Тема:</h3><p>Каскадні таблиці стилів. Селектори. Ідентифікатори. Стильове оформлення текстових елементів у HTML-документах.</p>'+
-                '<h3>Мета:</h3><p>Придбати практичні навички роботи з селекторами, ідентифікаторами, списками, різноманітними властивостями кольору і фону, зовнішними та внутрішними відступами, плаваючими елементами, оформленням текстових елементів.</p>' +
+                content.innerHTML = '<h3>Тема:</h3><p>Верстка HTML-документу. Блокова верстка. Верстка засобами CSS та FLEXBOX.</p>'+
+                '<h3>Мета:</h3>' +
+                    '<ul>' +
+                        '<li><p>придбати практичні навички роботи верстки сторінок засобами CSS, верстки на основі плаваючих елементів, з’ясувати переваги та недоліки типів макетів веб-сторінок;</p></li>' +
+                        '<li><p>придбати практичні навички роботи верстки сторінок засобами CSS та FLEXBOX.</p></li>' +
+                    '</ul>' +
+                '</p>' +
                 '<h3>Посилання на проєкт:</h3><a href="https://github.com/SophiaMelnyk/project.git" target="_blank">Посилання на проєкт</a>';
             });
             
-            connectstylesButton.addEventListener("click", function () {
-                content.innerHTML = '<h3>Способи підключення стилів</h3>' +
+            taskoneButton.addEventListener("click", function () {
+                content.innerHTML = '<h3>Завдання №1. Зовнішній вигляд макету. Код макету</h3>' +
                 '<h4>1. Використання вбудованого стилю:</h4><p>Можна використовувати атрибут &lt;style> безпосередньо в тегах HTML для встановлення стилів конкретним елементам.</p>'+
                 '<h4>2. Внутрішній CSS:</h4><p>Можна вставити CSS-стилі безпосередньо в тег &lt;head> HTML-документа за допомогою тегу &lt;style>.</p>'+
                 '<h4>3. Зовнішній CSS:</h4><p>Найкращий спосіб організації стилів у великих веб-проектах - це використовувати зовнішні CSS-файли. Створити окремий файл з розширенням .css, визначити в ньому всі потрібні стилі, а потім підключити його до HTML-сторінки за допомогою тегу &lt;link>.</p>';
@@ -96,7 +103,21 @@
             });
 
             conclusionButton.addEventListener("click", function () {
-                content.innerHTML = '<h3>Висновок</h3><p>На лабораторній роботі були здобуті практичні навички роботи з селекторами, ідентифікаторами, списками, різноманітними властивостями кольору і фону, зовнішними та внутрішними відступами, плаваючими елементами, оформленням текстових елементів.</p>';
+                content.innerHTML = '<h3>Висновок</h3>' +
+                '<h4>Створення веб-додатків за допомогою таблиць:</h4>' +
+                '<h4>Переваги:</h4>' +
+                '<p>1. Простота в розробці: використання таблиць для оформлення і розміщення вмісту може бути дуже простим і легким для розробника, особливо для створення простих структур.</p>' +
+                '<p>2. Контроль над розміром і розташуванням: таблиці дозволяють точно контролювати розмір і розташування елементів на сторінці, що важливо для деяких дизайнерських вимог.</p>' +
+                '<h4>Недоліки:</h4>' +
+                '<p>1. Неадаптивність: використання таблиць може призвести до проблем з адаптивністю на різних пристроях і розмірах екрану.</p>' +
+                '<p>2. Специфічність коду: код, що використовує таблиці для розміщення вмісту, може бути менш зрозумілим і складним для розробки та підтримки.</p>' +
+                '<h4>Створення веб-додатків за допомогою блоків (плаваючих блоків):</h4>' +
+                '<h4>Переваги:</h4>' +
+                '<p>1. Адаптивність: використання блоків дозволяє створювати адаптивний дизайн, який легко пристосовується до різних розмірів екрану і пристроїв.</p>' +
+                '<p>2. Зручний CSS: робота з блоками дозволяє використовувати CSS для стилізації і розміщення елементів, що робить код більш чистим і зрозумілим.</p>' +
+                '<h4>Недоліки:</h4>' +
+                '<p>1. Складність для початківців: для новачків може бути складним зрозуміти, як працюють різні CSS-властивості для розміщення блоків.</p>' +
+                '<p>2. Можливість неправильної розмітки: неправильне використання блоків може призвести до проблем з розміткою і відображенням на сторінці.</p>';
             });
         });
       </script>
@@ -115,7 +136,7 @@
         <div class="button-labs">
             <button class="button"><a href="lab1.html">Лабораторна робота №1</a></button>
             <button class="button"><a href="lab2.html">Лабораторна робота №2</a></button>
-            <button class="button"><a href="#">Лабораторна робота №3</a></button>
+            <button class="button"><a href="lab3.html">Лабораторна робота №3</a></button>
             <button class="button"><a href="#">Лабораторна робота №4</a></button>
             <button class="button"><a href="#">Лабораторна робота №5</a></button>
             <button class="button"><a href="#">Лабораторна робота №6</a></button>
@@ -124,12 +145,12 @@
             <button class="button"><a href="#">Лабораторна робота №9</a></button>
         </div>        
         <hr>
-        <h3>ЛАБОРАТОРНА РОБОТА №2</h3>
+        <h3>ЛАБОРАТОРНА РОБОТА №3</h3>
     </header>
     <main>
         <div class="button-container">
             <button id="topicButton">Тема та мета, місце розташування сайту, звіту</button>
-            <button id="connectstylesButton">Способи підключення стилів</button>
+            <button id="taskoneButton">Завдання №1. Зовнішній вигляд макету. Код макету</button>
             <div class="choose-dropdown">
                 <button id="chooseButton">Селектори</button>
                 <div class="choose-content">
