@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота №1</title>
+    <link rel="icon" href="images/study.png">
+    <link rel="stylesheet" href="styles/styles.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const topicButton = document.getElementById("topicButton");
+            const descriptionButton = document.getElementById("descriptionButton");
+            const tablecodeButton = document.getElementById("tablecodeButton");
+            const chooseButton = document.getElementById("chooseButton");
+            const formcodeButton = document.getElementById("formcodeButton");
+            const imagecodeButton = document.getElementById("imagecodeButton");
+            const conclusionButton = document.getElementById("conclusionButton");
+            const content = document.querySelector(".content");
+           
+            topicButton.addEventListener("click", function () {
+                content.innerHTML = '<h3>Тема:</h3><p>Структура HTML-документа. Вибір предметної галузі. Робота з посиланнями, таблицями, зображеннями, списками в HTML-документі.</p>'+
+                '<h3>Мета:</h3><p>Придбати практичні навички роботи з HTML-документом, таблицями, зображеннями, посиланнями, списками, формами. Створити шаблон звітного HTML-документа для відображення результатів роботи всіх лабораторних робіт.</p>';
+            });
+            
+            descriptionButton.addEventListener("click", function () {
+                content.innerHTML = '<h3>Опис предметного середовища</h3>' +
+                '<h4>Тема:</h4><p>Планувальник задач</p>'+
+                '<h4>Опис:</h4><p>Основний функціонал планувальника - це робота з задачами. Користувач може створювати, редагувати та видаляти задачі. Кожна задача повинна мати наступні характеристики:' +
+                    '<ul>' +
+                        '<li><h5>Назва</h5> Короткий заголовок, що визначає суть задачі.</li>' +
+                        '<li><h5>Опис</h5> Докладний опис задачі, де користувач може додатково вказати необхідну інформацію.</li>' +
+                        '<li><h5>Пріоритет</h5> Зазвичай задачі мають пріоритети (високий, середній, низький або користувацький).</li>' +
+                        '<li><h5>Дата завершення</h5> Дедлайн для завершення задачі.</li>' +
+                        '<li><h5>Статус</h5> Задачі можуть мати статуси, такі як "Виконано, "Не виконано" і т.д.</li>' +
+                    '</ul>' +
+                '</p>';
+            });
+
+            chooseButton.addEventListener("click", function () {
+                content.innerHTML = '<h3>Структура документа</h3>' +
+                '<h3>Головна сторінка WEB-застосунку</h3>' +
+                '<h4>HTML-код</h4>' +
+                '<img src="images/lab2_project_code.png" alt="Код">' +
+                '<img src="images/lab2_project1_code.png" alt="Код">' +
+                '<img src="images/lab2_project2_code.png" alt="Код">';
+            });
+
+            tablecodeButton.addEventListener("click", function () {
+                content.innerHTML = '<h3>Таблиці</h3>' +
+                '<h4>HTML-код таблиць</h4>' +
+                '<img src="images/lab2_table_code.png" alt="Код">' +
+                '<h4>Результат</h4>' +
+                '<img src="images/lab1_table.jpg" alt="Результат">';
+            });
+
+            formcodeButton.addEventListener("click", function () {
+                content.innerHTML = '<h3>Форма</h3>' +
+                '<h4>HTML-код форми</h4>' +
+                '<img src="images/lab2_form_code.png" alt="Код">' +
+                '<h4>Результат</h4>' +
+                '<img src="images/lab2_form.png" alt="Результат">';
+            });
+
+            imagecodeButton.addEventListener("click", function () {
+                content.innerHTML = '<h3>Зображення</h3>' +
+                '<h4>HTML-код зображення</h4>' +
+                '<img src="images/lab1_class_html.png" alt="Код">' +
+                '<h4>Результат</h4>' +
+                '<img src="images/lab1_class.jpg" alt="Результат">';
+            });
+
+            conclusionButton.addEventListener("click", function () {
+                content.innerHTML = '<h3>Висновок</h3><p>На лабораторній роботі були здобуті практичні навички роботи з HTML-документом, таблицями, зображеннями, посиланнями, списками, формами. Було створено шаблон звітного HTML-документа для відображення результатів роботи всіх лабораторних робіт.</p>';
+            });
+        });
+      </script>     
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <div>
+                <h2>ЗВІТИ З ЛАБОРАТОРНИХ РОБІТ<br>З ДИСЦИПЛІНИ «ІНТЕРНЕТ-ТЕХНОЛОГІЇ та ПРОЕКТУВАННЯ WEB-ЗАСТОСУВАНЬ»</h2>
+                <p><strong>Студент групи ІС-21</strong><br>Мельник Софія Василівна</p>
+            </div>
+            <img id="student" src="images/student_photo.jpg" alt="Фото студента">
+        </div>
+        <hr>
+        <div class="button-labs">
+            <button class="button"><a href="lab1.html">Лабораторна робота №1</a></button>
+            <button class="button"><a href="lab2.html">Лабораторна робота №2</a></button>
+            <button class="button"><a href="#">Лабораторна робота №3</a></button>
+            <button class="button"><a href="#">Лабораторна робота №4</a></button>
+            <button class="button"><a href="#">Лабораторна робота №5</a></button>
+            <button class="button"><a href="#">Лабораторна робота №6</a></button>
+            <button class="button"><a href="#">Лабораторна робота №7</a></button>
+            <button class="button"><a href="#">Лабораторна робота №8</a></button>
+            <button class="button"><a href="#">Лабораторна робота №9</a></button>
+        </div>        
+        <hr>
+        <h3>ЛАБОРАТОРНА РОБОТА №1</h3>
+    </header>
+    <main>
+        <div class="button-container">
+            <button id="topicButton">Тема та мета лабораторної роботи №1</button>
+            <button id="descriptionButton">Опис предметного середовища</button>
+            <div class="choose-dropdown">
+                <button id="chooseButton">Структура документа</button>
+                <div class="choose-content">
+                    <button id="tablecodeButton">Таблиці</button>
+                    <button id="formcodeButton">Форма</button>
+                    <button id="imagecodeButton">Зображення</button>
+                </div>
+            </div>
+            <button id="conclusionButton">Висновок</button>
+        </div>
+        <div class="content">
+
+        </div>
+    </main>
+</body>
+</html>

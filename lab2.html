@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота №2</title>
+    <link rel="icon" href="images/study.png">
+    <link rel="stylesheet" href="styles/styles.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const topicButton = document.getElementById("topicButton");
+            const connectstylesButton = document.getElementById("connectstylesButton");
+            const tagChooseButton = document.getElementById("tagChooseButton");
+            const classChooseButton = document.getElementById("classChooseButton");
+            const identifierChooseButton = document.getElementById("identifierChooseButton");
+            const otherChooseButton = document.getElementById("otherChooseButton");
+            const otherButton = document.getElementById("otherButton");
+            const conclusionButton = document.getElementById("conclusionButton");
+            const content = document.querySelector(".content");
+            
+            topicButton.addEventListener("click", function () {
+                content.innerHTML = '<h3>Тема:</h3><p>Каскадні таблиці стилів. Селектори. Ідентифікатори. Стильове оформлення текстових елементів у HTML-документах.</p>'+
+                '<h3>Мета:</h3><p>Придбати практичні навички роботи з селекторами, ідентифікаторами, списками, різноманітними властивостями кольору і фону, зовнішними та внутрішними відступами, плаваючими елементами, оформленням текстових елементів.</p>';
+            });
+            
+            connectstylesButton.addEventListener("click", function () {
+                content.innerHTML = '<h3>Способи підключення стилів</h3>' +
+                '<h4>1. Використання вбудованого стилю:</h4><p>Можна використовувати атрибут &lt;style> безпосередньо в тегах HTML для встановлення стилів конкретним елементам.</p>'+
+                '<h4>2. Внутрішній CSS:</h4><p>Можна вставити CSS-стилі безпосередньо в тег &lt;head> HTML-документа за допомогою тегу &lt;style>.</p>'+
+                '<h4>3. Зовнішній CSS:</h4><p>Найкращий спосіб організації стилів у великих веб-проектах - це використовувати зовнішні CSS-файли. Створити окремий файл з розширенням .css, визначити в ньому всі потрібні стилі, а потім підключити його до HTML-сторінки за допомогою тегу &lt;link>.</p>';
+            });
+
+            tagChooseButton.addEventListener("click", function () {
+                content.innerHTML = '<h3>Селектори тегу</h3>' +
+                '<p>Селектор тегу обирає HTML елементи на основі імені елемента.<p>' +
+                '<h3>HTML-код</h3>' +
+                '<img src="images/lab1_tag_html.png" alt="Код">' +
+                '<h3>CSS-код</h3>' +
+                '<img src="images/lab1_tag_code.png" alt="Код">' +
+                '<h3>Результат</h3>' +
+                '<img src="images/lab1_tag.jpg" alt="Результат">';
+            });
+
+            classChooseButton.addEventListener("click", function () {
+                content.innerHTML = '<h3>Селектори класу</h3>' +
+                '<p>Селектор class обирає HTML елементи з визначеним атрибутом класу.<p>' +
+                '<h3>HTML-код</h3>' +
+                '<img src="images/lab1_class_html.png" alt="Код">' +
+                '<h3>CSS-код</h3>' +
+                '<img src="images/lab1_class_code.png" alt="Код">' +
+                '<h3>Результат</h3>' +
+                '<img src="images/lab1_class.jpg" alt="Результат">';
+            });
+
+            identifierChooseButton.addEventListener("click", function () {
+                content.innerHTML = '<h3>Селектори ідентифікаторів</h3>' +
+                '<p>Селектор id використовує атрибут id HTML елемента для вибору визначеного елемента.<p>' +
+                '<h3>CSS-код</h3>' +
+                '<img src="images/lab1_id_code.png" alt="Код">';
+            });
+
+            otherChooseButton.addEventListener("click", function () {
+                content.innerHTML = '<h3>Універсальні селектори</h3>' +
+                '<p>Універсальний селектор (*) виділяє всі елементи HTML на сторінці.<p>' +
+                '<img src="images/lab1_universal_code.png" alt="Код">';
+            });
+
+            otherButton.addEventListener("click", function () {
+                content.innerHTML = '<h3>Шрифти</h3>' +
+                '<h4>CSS-код</h4>' +
+                '<img src="images/lab1_fonts_code.png" alt="Код">' +
+                '<h4>Результат</h4>' +
+                '<img src="images/lab1_tag.jpg" alt="Результат">' +
+                '<h3>Контури</h3>' +
+                '<h4>CSS-код</h4>' +
+                '<img src="images/lab1_contour_code.png" alt="Код">' +
+                '<h4>Результат</h4>' +
+                '<img src="images/lab1_class.jpg" alt="Результат">' +
+                '<h3>Фон</h3>' +
+                '<h4>CSS-код</h4>' +
+                '<img src="images/lab1_color_code.png" alt="Код">' +
+                '<h3>Колір тексту</h3>' +
+                '<h4>CSS-код</h4>' +
+                '<img src="images/lab1_colortext_code.png" alt="Код">' +
+                '<h4>Результат</h4>' +
+                '<img src="images/lab1_tag.jpg" alt="Результат">' +
+                '<h3>CSS-властивості для таблиць, багаторівневих списків</h3>' +
+                '<h4>CSS-код</h4>' +
+                '<img src="images/lab1_table_code.png" alt="Код">' +
+                '<img src="images/lab1_list_code.png" alt="Код">' +
+                '<h4>Результат</h4>' +
+                '<img src="images/lab1_table.jpg" alt="Результат">' +
+                '<img src="images/lab1_list.jpg" alt="Результат">';
+            });
+
+            conclusionButton.addEventListener("click", function () {
+                content.innerHTML = '<h3>Висновок</h3><p>На лабораторній роботі були здобуті практичні навички роботи з селекторами, ідентифікаторами, списками, різноманітними властивостями кольору і фону, зовнішними та внутрішними відступами, плаваючими елементами, оформленням текстових елементів.</p>';
+            });
+        });
+      </script>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <div>
+                <h2>ЗВІТИ З ЛАБОРАТОРНИХ РОБІТ<br>З ДИСЦИПЛІНИ «ІНТЕРНЕТ-ТЕХНОЛОГІЇ та ПРОЕКТУВАННЯ WEB-ЗАСТОСУВАНЬ»</h2>
+                <p><strong>Студент групи ІС-21</strong><br>Мельник Софія Василівна</p>
+            </div>
+            <img id="student" src="images/student_photo.jpg" alt="Фото студента">
+        </div>
+        <hr>
+        <div class="button-labs">
+            <button class="button"><a href="lab1.html">Лабораторна робота №1</a></button>
+            <button class="button"><a href="lab2.html">Лабораторна робота №2</a></button>
+            <button class="button"><a href="#">Лабораторна робота №3</a></button>
+            <button class="button"><a href="#">Лабораторна робота №4</a></button>
+            <button class="button"><a href="#">Лабораторна робота №5</a></button>
+            <button class="button"><a href="#">Лабораторна робота №6</a></button>
+            <button class="button"><a href="#">Лабораторна робота №7</a></button>
+            <button class="button"><a href="#">Лабораторна робота №8</a></button>
+            <button class="button"><a href="#">Лабораторна робота №9</a></button>
+        </div>        
+        <hr>
+        <h3>ЛАБОРАТОРНА РОБОТА №2</h3>
+    </header>
+    <main>
+        <div class="button-container">
+            <button id="topicButton">Тема та мета лабораторної роботи №2</button>
+            <button id="connectstylesButton">Способи підключення стилів</button>
+            <div class="choose-dropdown">
+                <button id="chooseButton">Селектори</button>
+                <div class="choose-content">
+                    <button id="tagChooseButton">Селектори тегу</button>
+                    <button id="classChooseButton">Селектори класу</button>
+                    <button id="identifierChooseButton">Селектори ідентифікаторів</button>
+                    <button id="otherChooseButton">Універсальні селектори</button>
+                </div>
+            </div>
+            <button id="otherButton">CSS шрифти, текст, таблиці, фон, контур, списки</button>
+            <button id="conclusionButton">Висновок</button>
+        </div>
+        <div class="content">
+
+        </div>
+    </main>
+</body>
+</html>
