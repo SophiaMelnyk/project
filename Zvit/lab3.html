@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота №3</title>
+    <link rel="icon" href="images/study.png">
+    <link rel="stylesheet" href="styles/styles.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const topicButton = document.getElementById("topicButton");
+            const taskoneButton = document.getElementById("taskoneButton");
+            const tasktwoButton = document.getElementById("tasktwoButton");
+
+            const FixTablButton = document.getElementById("FixTablButton");
+            const FlexTablButton = document.getElementById("FlexTablButton");
+            const FixBlockButton = document.getElementById("FixBlockButton");
+            const FlexBlockButton = document.getElementById("FlexBlockButton");
+
+            const ScreenshotButton = document.getElementById("ScreenshotButton");
+            const HTMLcodeButton = document.getElementById("HTMLcodeButton");
+            const CSScodeButton = document.getElementById("CSScodeButton");
+
+            const conclusionButton = document.getElementById("conclusionButton");
+            const content = document.querySelector(".content");
+            
+            topicButton.addEventListener("click", function () {
+                content.innerHTML = '<h3>Тема:</h3><p>Верстка HTML-документу. Блокова верстка. Верстка засобами CSS та FLEXBOX.</p>'+
+                '<h3>Мета:</h3>' +
+                    '<ul>' +
+                        '<li><p>придбати практичні навички роботи верстки сторінок засобами CSS, верстки на основі плаваючих елементів, з’ясувати переваги та недоліки типів макетів веб-сторінок;</p></li>' +
+                        '<li><p>придбати практичні навички роботи верстки сторінок засобами CSS та FLEXBOX.</p></li>' +
+                    '</ul>' +
+                '</p>' +
+                '<h3>Посилання на проєкт:</h3><a href="https://github.com/SophiaMelnyk/project.git" target="_blank">Посилання на проєкт</a>';
+            });
+            
+            taskoneButton.addEventListener("click", function () {
+                content.innerHTML = '<h3>Завдання №1. Зовнішній вигляд макету. Код макету</h3>' +
+                '<p>У власному прикладі я використовую блокову веб-верстку сайту. Блокова веб-верстка сайту – це більш сучасний та універсальний різновид.' +
+                    ' Блоки представляють собою незалежні елементи, які можна легко міняти місцями, що відкриває безмежні можливості для верстальника.' +
+                    ' Це дуже зручно, наприклад, якщо футер, шапка сайту або будь-який інший елемент потребує доопрацювання. Також я використовую гумовий підхід.' +
+                    ' Гумова верстка сайту здатна підлаштовуватися під різні параметри.</p>' +
+                '<h4>Зовнішній вигляд макету</h4>' +
+                    '<img src="images/lab3_task1.png" style="width: 960px; height: 408.5px;" alt="Зовнішній вигляд макету">' +
+                '<h4>HTML-код макету</h4>'+
+                    '<img src="images/lab3_task1_code1.png" style="width: 810px; height: 408.5px;" alt="Код">' +
+                    '<img src="images/lab3_task1_code2.png" style="width: 810px; height: 408.5px;" alt="Код">' +
+                '<h4>CSS-код макету</h4>'+
+                    '<img src="images/lab3_task1_css_code1.png" style="width: 810px; height: 408.5px;" alt="Код">' +
+                    '<img src="images/lab3_task1_css_code2.png" style="width: 810px; height: 408.5px;" alt="Код">' +
+                    '<img src="images/lab3_task1_css_code3.png" style="width: 810px; height: 408.5px;" alt="Код">' +
+                    '<img src="images/lab3_task1_css_code4.png" style="width: 810px; height: 408.5px;" alt="Код">' +
+                    '<img src="images/lab3_task1_css_code5.png" style="width: 810px; height: 408.5px;" alt="Код">' +
+                    '<img src="images/lab3_task1_css_code6.png" style="width: 810px; height: 408.5px;" alt="Код">' +
+                    '<img src="images/lab3_task1_css_code7.png" style="width: 810px;" alt="Код">';
+            });
+
+            tasktwoButton.addEventListener("click", function () {
+                content.innerHTML = '<h3>Переваги та недоліки створення веб-додатків за допомогою таблиці та за допомогою блоків (плаваючих блоків)</h3>' +
+                '<img src="images/lab3_task2.png" alt="Код">';
+            });
+
+            FixTablButton.addEventListener("click", function () {
+                content.innerHTML = '<h3>Фіксована таблична верстка</h3>' +
+                '<h4>Зовнішній вигляд макету</h4>' +
+                    '<img src="images/lab3_task2_FixTabl.png" style="width: 680px; height: 355.5px;" alt="Зовнішній вигляд макету">' +
+                '<h4>HTML-код макету</h4>'+
+                    '<img src="images/lab3_task2_FixTabl_html_code.png" alt="Код">' +
+                '<h4>CSS-код макету</h4>'+
+                    '<img src="images/lab3_task2_FixTabl_css_code.png" alt="Код">';
+            });
+
+            FlexTablButton.addEventListener("click", function () {
+                content.innerHTML = '<h3>Гумова таблична верстка</h3>' +
+                '<h4>Зовнішній вигляд макету</h4>' +
+                    '<img src="images/lab3_task2_FlexTabl.png" style="width: 955px; height: 355px;" alt="Зовнішній вигляд макету">' +
+                '<h4>HTML-код макету</h4>'+
+                    '<img src="images/lab3_task2_FixTabl_html_code.png" alt="Код">' +
+                '<h4>CSS-код макету</h4>'+
+                    '<img src="images/lab3_task2_FlexTabl_css_code.png" alt="Код">';
+            });
+
+            FixBlockButton.addEventListener("click", function () {
+                content.innerHTML = '<h3>Фіксована блокова верстка</h3>' +
+                '<h4>Зовнішній вигляд макету</h4>' +
+                    '<img src="images/lab3_task2_FixBlock.png" style="width: 680px; height: 355.5px;" alt="Зовнішній вигляд макету">' +
+                '<h4>HTML-код макету</h4>'+
+                    '<img src="images/lab3_task2_FixBlock_html_code.png" alt="Код">' +
+                '<h4>CSS-код макету</h4>'+
+                    '<img src="images/lab3_task2_FixBlock_css_code.png" alt="Код">';
+            });
+
+            FlexBlockButton.addEventListener("click", function () {
+                content.innerHTML = '<h3>Гумова блокова верстка</h3>' +
+                '<h4>Зовнішній вигляд макету</h4>' +
+                    '<img src="images/lab3_task2_FlexBlock.png" style="width: 680px; height: 355.5px;" alt="Зовнішній вигляд макету">' +
+                '<h4>HTML-код макету</h4>'+
+                    '<img src="images/lab3_task2_FixBlock_html_code.png" alt="Код">' +
+                '<h4>CSS-код макету</h4>'+
+                    '<img src="images/lab3_task2_FlexBlock_css_code.png" alt="Код">';
+            });
+
+            ScreenshotButton.addEventListener("click", function () {
+                content.innerHTML = '<h3>Скріншот сторінки (FLEXBOX)</h3>' +
+                '<img src="images/lab3_task3_1.png" style="width: 960px; height: 366px;" alt="Скріншот сторінки (FLEXBOX)">' +
+                '<img src="images/lab3_task3_2.png" style="width: 960px;" alt="Скріншот сторінки (FLEXBOX)">';
+            });
+
+            HTMLcodeButton.addEventListener("click", function () {
+                content.innerHTML = '<h3>HTML-код (FLEXBOX)</h3>' +
+                '<img src="images/lab3_task3_html_code1.png" style="width: 826px; height: 410.5px;" alt="Код">' +
+                '<img src="images/lab3_task3_html_code2.png" style="width: 826px; height: 410.5px;" alt="Код">' +
+                '<img src="images/lab3_task3_html_code3.png" style="width: 826px;" alt="Код">';
+            });
+
+            CSScodeButton.addEventListener("click", function () {
+                content.innerHTML = '<h3>CSS-код (FLEXBOX)</h3>' +
+                '<img src="images/lab3_task3_css_code1.png" alt="Код">' +
+                '<img src="images/lab3_task3_css_code2.png" alt="Код">' +
+                '<img src="images/lab3_task3_css_code3.png" alt="Код">';
+            });
+
+            conclusionButton.addEventListener("click", function () {
+                content.innerHTML = '<h3>Висновок</h3>' +
+                '<img src="images/vusnovok_3.png" alt="Висновок">';
+            });
+        });
+      </script>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <div>
+                <h2>ЗВІТИ З ЛАБОРАТОРНИХ РОБІТ<br>З ДИСЦИПЛІНИ «ІНТЕРНЕТ-ТЕХНОЛОГІЇ та ПРОЕКТУВАННЯ WEB-ЗАСТОСУВАНЬ»</h2>
+                <p><strong>Студент групи ІС-21</strong><br>Мельник Софія Василівна</p>
+            </div>
+            <img id="student" src="images/student_photo.jpg" alt="Фото студента">
+        </div>
+        <hr>
+        <div class="button-labs">
+            <button class="button"><a href="lab1.html">Лабораторна робота №1</a></button>
+            <button class="button"><a href="lab2.html">Лабораторна робота №2</a></button>
+            <button class="button"><a href="lab3.html">Лабораторна робота №3</a></button>
+            <button class="button"><a href="#">Лабораторна робота №4</a></button>
+            <button class="button"><a href="#">Лабораторна робота №5</a></button>
+            <button class="button"><a href="#">Лабораторна робота №6</a></button>
+            <button class="button"><a href="#">Лабораторна робота №7</a></button>
+            <button class="button"><a href="#">Лабораторна робота №8</a></button>
+            <button class="button"><a href="#">Лабораторна робота №9</a></button>
+        </div>        
+        <hr>
+        <h3>ЛАБОРАТОРНА РОБОТА №3</h3>
+    </header>
+    <main>
+        <div class="button-container">
+            <button id="topicButton">Тема та мета, місце розташування сайту, звіту</button>
+            <button id="taskoneButton">Завдання №1. Зовнішній вигляд макету. Код макету</button>
+
+            <button id="tasktwoButton">Завдання №2</button>
+            <button id="FixTablButton">Фіксована таблична верстка</button>
+            <button id="FlexTablButton">Гумова таблична верстка</button>
+            <button id="FixBlockButton">Фіксована блокова верстка</button>
+            <button id="FlexBlockButton">Гумова блокова верстка</button>
+
+            <button id="taskthreeButton">Завдання №3 FLEXBOX</button>
+            <button id="ScreenshotButton">Скріншот сторінки (FLEXBOX)</button>
+            <button id="HTMLcodeButton">HTML-код (FLEXBOX)</button>
+            <button id="CSScodeButton">CSS-код (FLEXBOX)</button>
+
+            <button id="conclusionButton">Висновок</button>
+        </div>
+        <div class="content">
+
+        </div>
+    </main>
+</body>
+</html>

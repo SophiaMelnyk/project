@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planner</title>
+    <link rel="icon" href="images/planner.png">
+    <link rel="stylesheet" href="styles/stylesproject.css">
+</head>
+<body>
+    <header>
+        <a href="project.html">Головна</a>
+        <a href="deletedtasks.html">Видалені завдання</a>
+        <a href="aboutus.html">Про нас</a>
+        <br>
+        <br>
+        <h1>Планувальник завдань</h1>
+    <header>
+    <main>
+        <div class="content">
+        <h2>Створюйте власний список завдань на день</h2>
+        <p>Планувальник допомагає вам — і вашим колегам чи співробітникам — бути організованими. І не сумнівайтеся, це найкращий спосіб підвищити продуктивність у будь-якій сфері життя. Незалежно від того, займаєтесь ви бізнесом, чи сім'єю, планувальник може стати потужним інструментом, який вам знадобиться в майбутньому.</p>
+        </div>
+        <div class="img-container">
+            <img src="images/photo_1.jpg" alt="Зображення 1">
+        </div>
+        <div class="center-container">
+            <h2>Створити нове завдання:</h2>
+            <form action="/submit" method="post">
+                <label for="task">Завдання:</label>
+                <input type="text" id="task" name="task" required><br>
+                <label for="deadline">Термін:</label>
+                <input type="date" id="deadline" name="deadline" required><br>
+                <input type="submit" value="Додати завдання">
+            </form>
+        </div>
+        <h2>Завдання</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Завдання</th>
+                    <th>Опис завдання</th>
+                    <th>Пріоритет</th>
+                    <th>Дата</th>
+                    <th>Статус</th>
+                    <th>Редагувати</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Завдання 1</td>
+                    <td>Опис завдання 1</td>
+                    <td>Пріоритет 1</td>
+                    <td>10/10/2023</td>
+                    <td>Не виконано</td>
+                    <td><a href="edit_task.html">Редагувати</a></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Завдання 2</td>
+                    <td>Опис завдання 2</td>
+                    <td>Пріоритет 2</td>
+                    <td>11/10/2023</td>
+                    <td>Виконано</td>
+                    <td><a href="edit_task.html">Редагувати</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+    <br>
+    <br>
+    <footer> © 2023 Планувальник завдань </footer>
+</body>
+</html>

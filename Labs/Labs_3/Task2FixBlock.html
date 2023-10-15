@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Завдання 2</title>
+
+<style>
+.container {
+    width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.block {
+    height: 400px;
+    width: 900px;
+    border: 2px solid black;
+    text-align: center;
+    margin: 10px;
+}
+
+.header {
+    height: 100px;
+    background: blue;
+}
+
+.footer {
+    height: 100px;
+    background: blue;
+}
+
+.white {
+    height: 645px;
+    width: 100px;
+    background: white;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+#_2 {
+    height: 645px;
+    width: 200px;
+    background: yellow;
+    margin-right: 10px;
+}
+</style>
+
+</head>
+<body>
+     <div class="container">
+         <div class="block" id="_2">2</div>
+         <div class="column">
+             <div class="block header">1</div>
+             <div class="block" id="_4">4</div>
+             <div class="block footer">3</div>
+         </div>
+         <div class="block white"></div>
+     </div>
+</body>
+</html>

@@ -62,9 +62,22 @@
             });
 
             otherChooseButton.addEventListener("click", function () {
-                content.innerHTML = '<h3>Універсальні селектори</h3>' +
+                content.innerHTML = '<h3>Інші селектори</h3>' +
+                '<h4>Універсальні селектори</h4>' +
                 '<p>Універсальний селектор (*) виділяє всі елементи HTML на сторінці.<p>' +
-                '<img src="images/lab1_universal_code.png" alt="Код">';
+                '<img src="images/lab1_universal_code.png" alt="Код">' +
+                '<h4>Дочірні селектори</h4>' +
+                '<p>Дочірній селектор присвоює стиль тільки одному елементу, безпосередньо дочірньому. Дочірній селектор позначається символом ">".<p>' +
+                '<img src="images/lab1_other3_code.png" alt="Код">' +
+                '<h4>Сусідні селектори</h4>' +
+                '<p>Вибирає тільки той елемент, який слідує відразу ж за зазначеним елементом.<p>' +
+                '<img src="images/lab1_other1_code.png" alt="Код">' +
+                '<h4>Селектори атрибутів</h4>' +
+                '<p>Вибирає тільки анкерні теги, які мають атрибут title.<p>' +
+                '<img src="images/lab1_other2_code.png" alt="Код">' +
+                '<h4>Селектор групування</h4>' +
+                '<p>Селектори групування обирає всі HTML елементи з однаковими визначеннями стилю.<p>' +
+                '<img src="images/lab1_other4_code.png" alt="Код">';
             });
 
             otherButton.addEventListener("click", function () {
@@ -115,7 +128,7 @@
         <div class="button-labs">
             <button class="button"><a href="lab1.html">Лабораторна робота №1</a></button>
             <button class="button"><a href="lab2.html">Лабораторна робота №2</a></button>
-            <button class="button"><a href="#">Лабораторна робота №3</a></button>
+            <button class="button"><a href="lab3.html">Лабораторна робота №3</a></button>
             <button class="button"><a href="#">Лабораторна робота №4</a></button>
             <button class="button"><a href="#">Лабораторна робота №5</a></button>
             <button class="button"><a href="#">Лабораторна робота №6</a></button>
@@ -136,7 +149,7 @@
                     <button id="tagChooseButton">Селектори тегу</button>
                     <button id="classChooseButton">Селектори класу</button>
                     <button id="identifierChooseButton">Селектори ідентифікаторів</button>
-                    <button id="otherChooseButton">Універсальні селектори</button>
+                    <button id="otherChooseButton">Інші селектори</button>
                 </div>
             </div>
             <button id="otherButton">CSS шрифти, текст, таблиці, фон, контур, списки</button>

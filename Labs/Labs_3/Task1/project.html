@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planner</title>
+    <link rel="icon" href="images/planner.png">
+    <link rel="stylesheet" href="styles/stylesproject.css">
+</head>
+<body>
+    <header>
+        <img src="images/logo.png" alt="Логотип">
+        <div class="logo-nav">
+            <a href="project.html">Головна</a>
+            <a href="alltasks.html">Всі завдання</a>
+            <a href="basket.html">Кошик</a>
+        </div>
+        <div class="new-task-button">
+            <a href="newtask.html">Створити нове завдання</a>
+        </div>
+    </header>
+    <main>
+        <section class="left-section">
+            <h2>Дата</h2>
+            <p class="date" id="current-date"></p>
+        </section>
+        <section class="center-section">
+            <h2>Створюйте власний список завдань на день</h2>
+            <p>Планувальник допомагає вам — і вашим колегам чи співробітникам — бути організованими. І не сумнівайтеся, це найкращий спосіб підвищити 
+                продуктивність у будь-якій сфері життя. Незалежно від того, займаєтесь ви бізнесом, чи сім'єю, 
+                планувальник може стати потужним інструментом, який вам знадобиться в майбутньому.</p>
+        </div>
+        <div class="img-container">
+            <img src="images/photo_1.jpg" alt="Зображення 1">
+        </div>
+        </section>
+        <section class="right-section">
+            <h2>Завдання на сьогодні</h2>
+            <ul class="task-list">
+                <li class="task">Завдання 1</li>
+                <li class="task">Завдання 2</li>
+                <li class="task">Завдання 3</li>
+            </ul>
+        </section>
+    </main>
+    <script>
+        const currentDate = new Date();
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        const formattedDate = currentDate.toLocaleDateString('en-US', options);
+        document.getElementById('current-date').textContent = formattedDate;
+    </script>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <p>Планувальник завдань</p>
+            </div>
+            <div class="footer-links">
+                <a href="aboutus.html">Про нас</a>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            © 2023 Planner
+        </div>
+    </footer>
+</body>
+</html>
