@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота №5</title>
+    <link rel="icon" href="images/study.png">
+    <link rel="stylesheet" href="styles/styles.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const topicButton = document.getElementById("topicButton");
+
+            const taskoneButton = document.getElementById("taskoneButton");
+            const tasktwoButton = document.getElementById("tasktwoButton");
+            const taskthreeButton = document.getElementById("taskthreeButton");
+
+            const conclusionButton = document.getElementById("conclusionButton");
+            const content = document.querySelector(".content");
+            
+            topicButton.addEventListener("click", function () {
+                content.innerHTML = '<h3>Тема:</h3><p>Функціональне застосування JavaScript у HTML-документі. Використання масивів у JS-сценаріях. Реалізація програм засобами мови JavaScript.</p>' +
+                '<h3>Мета:</h3><p>Придбати практичні навички роботи з масивами у JS-сценаріях. Реалізація програм засовами мови JavaScript.</p>' +
+                '<h3>Посилання на проєкт:</h3><a href="https://github.com/SophiaMelnyk/project.git" target="_blank">Посилання на проєкт</a>';
+            });
+            
+            taskoneButton.addEventListener("click", function () {
+                content.innerHTML = '<h3>Завдання №1</h3>' +
+                '<img src="images/lab5_task1.png" alt="Умова завдання">' +
+                '<h4>Результат виконання</h4>' +
+                    '<img src="images/lab5_task1_result.png" style="width: 345px; height: 195px;" alt="Результат виконання">' +
+                '<h4>Код</h4>'+
+                    '<img src="images/lab5_task1_code.png" style="width: 387.5px; height: 458px;" alt="Код">' +
+                    '<img src="images/lab5_task1_code1.png" style="width: 323.5px; height: 308.5px;" alt="Код">';
+            });
+
+            tasktwoButton.addEventListener("click", function () {
+                content.innerHTML = '<h3>Завдання №2</h3>' +
+                '<h4>Результат виконання</h4>' +
+                    '<img src="images/lab5_task2_result.png" style="width: 581.5px; height: 134px;" alt="Результат виконання">' +
+                '<h4>CSS-код адаптивної верстки</h4>'+
+                    '<img src="images/lab5_task2_code.png" style="width: 696px; height: 448.5px;" alt="Код">' +
+                    '<img src="images/lab5_task2_code1.png" style="width: 706px; height: 458.5px;" alt="Код">';
+            });
+
+            taskthreeButton.addEventListener("click", function () {
+                content.innerHTML = '<h3>Власний сайт із застосуванням JavaScript</h3>' +
+                '<h4>Зовнішній вигляд сайту та результат виконання</h4>' +
+                    '<img src="images/lab5_task3_result.png" style="width: 960px; height: 446px;" alt="Зовнішній вигляд сайту та результат виконання">' +
+                    '<img src="images/lab5_task3_result1.png" style="width: 960px; height: 220px;" alt="Зовнішній вигляд сайту та результат виконання">' +
+                '<h4>Код</h4>'+
+                    '<img src="images/lab5_task3_code.png" style="width: 636px; height: 467.5px;" alt="Код">' +
+                    '<img src="images/lab5_task3_code1.png" style="width: 389px; height: 440px;" alt="Код">';
+            });
+
+            conclusionButton.addEventListener("click", function () {
+                content.innerHTML = '<h3>Висновок</h3>' +
+                '<img src="images/vusnovok_5.png" style="width: 1000px;" alt="Висновок">';
+            });
+        });
+      </script>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <div>
+                <h2>ЗВІТИ З ЛАБОРАТОРНИХ РОБІТ<br>З ДИСЦИПЛІНИ «ІНТЕРНЕТ-ТЕХНОЛОГІЇ та ПРОЕКТУВАННЯ WEB-ЗАСТОСУВАНЬ»</h2>
+                <p><strong>Студент групи ІС-21</strong><br>Мельник Софія Василівна</p>
+            </div>
+            <img id="student" src="images/student_photo.jpg" alt="Фото студента">
+        </div>
+        <hr>
+        <div class="button-labs">
+            <button class="button"><a href="lab1.html">Лабораторна робота №1</a></button>
+            <button class="button"><a href="lab2.html">Лабораторна робота №2</a></button>
+            <button class="button"><a href="lab3.html">Лабораторна робота №3</a></button>
+            <button class="button"><a href="lab4.html">Лабораторна робота №4</a></button>
+            <button class="button"><a href="lab5.html">Лабораторна робота №5</a></button>
+            <button class="button"><a href="#">Лабораторна робота №6</a></button>
+            <button class="button"><a href="#">Лабораторна робота №7</a></button>
+            <button class="button"><a href="#">Лабораторна робота №8</a></button>
+            <button class="button"><a href="#">Лабораторна робота №9</a></button>
+        </div>        
+        <hr>
+        <h3>ЛАБОРАТОРНА РОБОТА №5</h3>
+    </header>
+    <main>
+        <div class="button-container">
+            <button id="topicButton">Тема та мета, місце розташування сайту, звіту</button>
+
+            <button id="taskoneButton">Завдання №1</button>
+            <button id="tasktwoButton">Завдання №2</button>
+            <button id="taskthreeButton">Власний сайт із застосуванням JavaScript</button>
+
+            <button id="conclusionButton">Висновок</button>
+        </div>
+        <div class="content">
+
+        </div>
+    </main>
+</body>
+</html>

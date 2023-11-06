@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання №1</title>
+</head>
+<body>
+    <h1>Операції з масивами</h1>
+    <label for="arrayLength">Введіть кількість елементів масиву:</label>
+    <input type="number" id="arrayLength">
+    <button onclick="generateArray()">Створити масив</button>
+    <div id="result"></div>
+
+    <script>
+        function generateArray() {
+            const arrayLength = parseInt(document.getElementById("arrayLength").value);
+            if (isNaN(arrayLength) || arrayLength <= 0) {
+                alert("Введіть дійсне позитивне число.");
+                return;
+            }
+
+            const initialArray = generateRandomArray(arrayLength);
+            const minElement = findAndMoveMinToStart(initialArray);
+            const sortedArray = selectionSortDescending(initialArray.slice());
+
+            displayResults(arrayLength, initialArray, sortedArray);
+        }
+
+        function generateRandomArray(length) {
+            const array = [];
+            for (let i = 0; i < length; i++) {
+                array.push(Math.floor(Math.random() * 100));
+            }
+            return array;
+        }
+
+        function findAndMoveMinToStart(array) {
+            const minIndex = array.indexOf(Math.min(...array));
+            const minElement = array[minIndex];
+            array.splice(minIndex, 1);
+            array.unshift(minElement);
+            return minElement;
+        }
+
+        function selectionSortDescending(array) {
+            for (let i = 0; i < array.length - 1; i++) {
+                let maxIndex = i;
+                for (let j = i + 1; j < array.length; j++) {
+                    if (array[j] > array[maxIndex]) {
+                        maxIndex = j;
+                    }
+                }
+                if (maxIndex !== i) {
+                    const temp = array[i];
+                    array[i] = array[maxIndex];
+                    array[maxIndex] = temp;
+                }
+            }
+            return array;
+        }
+
+        function displayResults(length, initialArray, sortedArray) {
+            const resultDiv = document.getElementById("result");
+            resultDiv.innerHTML = `
+                <h2>Кількість елементів масиву: ${length}</h2>
+                <h3>Початковий масив:</h3>
+                <pre>${initialArray.join(", ")}</pre>
+                <h3>Відсортований масив (за спаданням):</h3>
+                <pre>${sortedArray.join(", ")}</pre>
+            `;
+        }
+    </script>
+</body>
+</html>

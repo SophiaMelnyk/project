@@ -42,10 +42,13 @@
 
         <section class="right-section">
             <h2>Завдання на сьогодні</h2>
-            <ul class="task-list">
-                <li class="task">Завдання 1</li>
-                <li class="task">Завдання 2</li>
-                <li class="task">Завдання 3</li>
+            <div>
+                <label for="taskCount">Введіть кількість завдань: </label>
+                <input type="number" id="taskCount" min="1">
+                <button id="generateTasks">Згенерувати список завдань</button>
+            </div>
+            <ul class="task-list" id="taskList">
+        
             </ul>
         </section>
         
@@ -56,7 +59,26 @@
         const options = { year: 'numeric', month: 'long', day: 'numeric' };
         const formattedDate = currentDate.toLocaleDateString('en-US', options);
         document.getElementById('current-date').textContent = formattedDate;
+
+        const generateTasksButton = document.getElementById('generateTasks');
+        generateTasksButton.addEventListener('click', generateTasks);
+
+        function generateTasks() {
+            const taskCount = parseInt(document.getElementById('taskCount').value);
+
+            if (!isNaN(taskCount) && taskCount > 0) {
+                const taskList = document.getElementById('taskList');
+                taskList.innerHTML = '';
+
+                for (let i = 1; i <= taskCount; i++) {
+                    const taskItem = document.createElement('li');
+                    taskItem.textContent = `Завдання ${i}`;
+                    taskList.appendChild(taskItem);
+                }
+            }
+        }
     </script>
+   
 
     <footer>
         <div class="footer-content">

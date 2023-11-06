@@ -12,45 +12,48 @@
             margin: 0;
             padding: 0;
         }
-
+   
         header {
             background-color: rgb(226, 222, 222);
             text-align: center;
             padding: 40px 0;
             font-weight: bold;
         }
-
+   
         .header-content {
             display: flex;
+            flex-wrap: wrap;
         }
-
+   
         .header-left {
             color: rgb(3, 158, 241);
             flex: 1;
         }
-
+   
         .header-right {
             color: rgb(11, 2, 114);
             flex: 1;
         }
-
+   
         nav {
             background-color: white;
             padding: 30px 0;
+            text-align: center;
         }
-
+   
         .navigation {
             list-style: none;
             margin: 0;
             padding: 0;
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
         }
-
+   
         .navigation li {
-            margin: 0 40px;
+            margin: 0 30px;
         }
-
+   
         .navigation a {
             text-decoration: none;
             color: #fff;
@@ -58,17 +61,18 @@
             background-color: rgb(3, 158, 241);
             font-weight: bold;
         }
-
+   
         .navigation a:hover {
             background-color: #777;
         }
-
+   
         main {
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-between;
             padding: 20px;
         }
-
+   
         .main-block1 {
             flex: 1;
             padding: 10px;
@@ -76,7 +80,7 @@
             background-color: rgb(3, 158, 241);
             border: 1px solid #ddd;
         }
-
+   
         .main-block2 {
             flex: 1;
             padding: 10px;
@@ -84,7 +88,7 @@
             background-color: #ffa126;
             border: 1px solid #ddd;
         }
-
+   
         .main-block3 {
             flex: 1;
             padding: 10px;
@@ -92,17 +96,17 @@
             background-color: #f32d2d;
             border: 1px solid #ddd;
         }
-
+   
         .main-block1 a {
             text-decoration: none;
             color: white;
         }
-
+   
         .search-field {
             width: 94%;
             padding: 10px;
         }
-
+   
         .courses-block {
             flex: 1;
             padding: 10px;
@@ -110,52 +114,83 @@
             background-color: #f0f0f0;
             border: 1px solid #ddd;
         }
-
+   
         .courses-heading {
             font-weight: bold;
             font-size: 18px;
         }
-
+   
         .courses-content {
             display: flex;
+            flex-wrap: wrap;
             align-items: center;
         }
-
+   
         .courses-photo {
             flex: 1;
             padding: 10px;
         }
-
+   
         .courses-text {
             flex: 2;
             padding: 10px;
             margin: 0 20px;
             text-align: left;
         }
-
+   
         .navigation1 {
             list-style: none;
             margin: 0;
             padding: 0;
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
         }
-
+   
         .navigation1 li {
             margin: 0 50px;
         }
-
+   
         .navigation1 a {
             text-decoration: none;
             color: #20247e;
             padding: 15px 60px;
             background-color: rgb(211, 213, 214);
-
             font-weight: bold;
         }
-
+   
         .navigation1 a:hover {
             background-color: #777;
+        }
+
+        @media screen and (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+            }
+   
+            .navigation1 {
+                flex-direction: column;
+                align-items: center;
+            }
+   
+            .navigation1 li {
+                margin: 25px 0;
+            }
+        }
+        
+        @media screen and (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+            }
+   
+            .navigation {
+                flex-direction: column;
+                align-items: center;
+            }
+   
+            .navigation li {
+                margin: 25px 0;
+            }
         }
     </style>
 
@@ -177,7 +212,7 @@
             <li><a href="#">Головна</a></li>
             <li><a href="#">Акції</a></li>
             <li><a href="#">Курси</a></li>
-            <li><a href="#">Про центр</a></li>
+            <li><a href="#">Центр</a></li>
             <li><a href="#">Контакти</a></li>
             <li><a href="#">Ціни</a></li>
             <li><a href="#">Блог</a></li>

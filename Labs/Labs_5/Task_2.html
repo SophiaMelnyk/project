@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Завдання №2</title>
+    <style>
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .tooltip-text {
+            visibility: hidden;
+            background-color: #333;
+            color: #fff;
+            border-radius: 5px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .tooltip:hover .tooltip-text {
+            visibility: visible;
+        }
+    </style>
+</head>
+<body>
+    <h1>Візуальний елемент «Спливаюча підказка»</h1>
+
+    <p>Виділіть фрагмент тексту та додайте підказку:</p>
+
+    <div id="userTooltipForm">
+        <input type="text" id="tooltipInput" placeholder="Введіть текст підказки">
+        <button id="addTooltipButton">Додати підказку</button>
+    </div>
+
+    <p>Наведіть курсор на текст, щоб побачити підказки:</p>
+
+    <div id="content">
+      Ось приклад тексту. <span class="tooltip" data-tooltip="Підказка для цього тексту">Наведіть на мене</span> для підказки. Ви також можете додати власні підказки.
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const content = document.getElementById("content");
+            const tooltipInput = document.getElementById("tooltipInput");
+            const addTooltipButton = document.getElementById("addTooltipButton");
+
+            addTooltipButton.addEventListener("click", function () {
+                const selectedText = window.getSelection().toString();
+                const tooltipText = tooltipInput.value;
+
+                if (selectedText && tooltipText) {
+                    const tooltipSpan = document.createElement("span");
+                    tooltipSpan.classList.add("tooltip");
+                    tooltipSpan.setAttribute("data-tooltip", tooltipText);
+                    tooltipSpan.innerText = selectedText;
+                    content.appendChild(tooltipSpan);
+
+                    tooltipInput.value = "";
+                }
+            });
+
+            content.addEventListener("mouseover", function (event) {
+                const target = event.target;
+                if (target.classList.contains("tooltip")) {
+                    const tooltip = document.createElement("span");
+                    tooltip.classList.add("tooltip-text");
+                    tooltip.innerText = target.getAttribute("data-tooltip");
+                    target.appendChild(tooltip);
+                }
+            });
+
+            content.addEventListener("mouseout", function (event) {
+                const target = event.target;
+                if (target.classList.contains("tooltip")) {
+                    const tooltip = target.querySelector(".tooltip-text");
+                    if (tooltip) {
+                        target.removeChild(tooltip);
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

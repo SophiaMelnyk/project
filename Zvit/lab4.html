@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота №4</title>
+    <link rel="icon" href="images/study.png">
+    <link rel="stylesheet" href="styles/styles.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const topicButton = document.getElementById("topicButton");
+
+            const taskoneButton = document.getElementById("taskoneButton");
+            const tasktwoButton = document.getElementById("tasktwoButton");
+            const taskthreeButton = document.getElementById("taskthreeButton");
+
+            const conclusionButton = document.getElementById("conclusionButton");
+            const content = document.querySelector(".content");
+            
+            topicButton.addEventListener("click", function () {
+                content.innerHTML = '<h3>Тема:</h3><p>Адаптивна верстка. Медіа-запити. Метатег viewport. Стратегія Mobile First.</p>'+
+                '<h3>Мета:</h3><p>Адаптивна верстка. Медіа-запити. Медіа-типи. Медіа-функції. Метатег viewport. Інструменти розробника. Стратегія Mobile First.</p>' +
+                '<h3>Посилання на проєкт:</h3><a href="https://github.com/SophiaMelnyk/project.git" target="_blank">Посилання на проєкт</a>';
+            });
+            
+            taskoneButton.addEventListener("click", function () {
+                content.innerHTML = '<h3>Адаптивна верстка для Десктопної версії</h3>' +
+                '<h4>Зовнішній вигляд сайту</h4>' +
+                    '<img src="images/lab4_task1.png" style="width: 650.2px; height: 445.5px;" alt="Зовнішній вигляд сайту">' +
+                '<h4>CSS-код адаптивної верстки</h4>'+
+                    '<img src="images/lab4_task1_code.png" alt="Код">';
+            });
+
+            tasktwoButton.addEventListener("click", function () {
+                content.innerHTML = '<h3>Адаптивна верстка для Планшетної версії</h3>' +
+                '<h4>Зовнішній вигляд сайту</h4>' +
+                    '<img src="images/lab4_task2.png" style="width: 650.2px; height: 445.5px;" alt="Зовнішній вигляд сайту">' +
+                '<h4>CSS-код адаптивної верстки</h4>'+
+                    '<img src="images/lab4_task2_code.png" alt="Код">';
+            });
+
+            taskthreeButton.addEventListener("click", function () {
+                content.innerHTML = '<h3>Адаптивна верстка для Мобільної версії</h3>' +
+                '<h4>Зовнішній вигляд сайту</h4>' +
+                    '<img src="images/lab4_task3.png" style="width: 650.2px; height: 445.5px;" alt="Зовнішній вигляд сайту">' +
+                '<h4>CSS-код адаптивної верстки</h4>'+
+                    '<img src="images/lab4_task3_code.png" alt="Код">';
+            });
+
+            conclusionButton.addEventListener("click", function () {
+                content.innerHTML = '<h3>Висновок</h3>' +
+                '<img src="images/vusnovok_4.png" style="width: 816px; height: 378.5px;" alt="Висновок">';
+            });
+        });
+      </script>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <div>
+                <h2>ЗВІТИ З ЛАБОРАТОРНИХ РОБІТ<br>З ДИСЦИПЛІНИ «ІНТЕРНЕТ-ТЕХНОЛОГІЇ та ПРОЕКТУВАННЯ WEB-ЗАСТОСУВАНЬ»</h2>
+                <p><strong>Студент групи ІС-21</strong><br>Мельник Софія Василівна</p>
+            </div>
+            <img id="student" src="images/student_photo.jpg" alt="Фото студента">
+        </div>
+        <hr>
+        <div class="button-labs">
+            <button class="button"><a href="lab1.html">Лабораторна робота №1</a></button>
+            <button class="button"><a href="lab2.html">Лабораторна робота №2</a></button>
+            <button class="button"><a href="lab3.html">Лабораторна робота №3</a></button>
+            <button class="button"><a href="lab4.html">Лабораторна робота №4</a></button>
+            <button class="button"><a href="lab5.html">Лабораторна робота №5</a></button>
+            <button class="button"><a href="#">Лабораторна робота №6</a></button>
+            <button class="button"><a href="#">Лабораторна робота №7</a></button>
+            <button class="button"><a href="#">Лабораторна робота №8</a></button>
+            <button class="button"><a href="#">Лабораторна робота №9</a></button>
+        </div>        
+        <hr>
+        <h3>ЛАБОРАТОРНА РОБОТА №4</h3>
+    </header>
+    <main>
+        <div class="button-container">
+            <button id="topicButton">Тема та мета, місце розташування сайту, звіту</button>
+
+            <button id="taskoneButton">Адаптивна верстка для Десктопної версії</button>
+            <button id="tasktwoButton">Адаптивна верстка для Планшетної версії</button>
+            <button id="taskthreeButton">Адаптивна верстка для Мобільної версії</button>
+
+            <button id="conclusionButton">Висновок</button>
+        </div>
+        <div class="content">
+
+        </div>
+    </main>
+</body>
+</html>
