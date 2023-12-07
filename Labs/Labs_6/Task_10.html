@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання №10</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        textarea {
+            width: 80%;
+            height: 100px;
+        }
+        #result {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Перевірка дужок</h2>
+    <label for="code">Введіть код JS:</label><br>
+    <textarea id="code"></textarea><br>
+    <button onclick="checkBrackets()">Перевірити</button>
+    <div id="result"></div>
+
+    <script>
+        function checkBrackets() {
+            const code = document.getElementById('code').value;
+            const resultElement = document.getElementById('result');
+
+            if (areBracketsCorrect(code)) {
+                resultElement.innerHTML = '<p style="color: green;">Дужки правильні!</p>';
+            } else {
+                resultElement.innerHTML = '<p style="color: red;">Дужки неправильні!</p>';
+            }
+        }
+
+        function areBracketsCorrect(code) {
+            const stack = [];
+            const bracketPairs = {
+                '(': ')',
+                '{': '}',
+                '[': ']'
+            };
+
+            for (let char of code) {
+                if (bracketPairs[char]) {
+                    // Якщо символ відкриває дужку, помістіть її в стек
+                    stack.push(char);
+                } else if (Object.values(bracketPairs).includes(char)) {
+                    // Якщо символ є закриваючою дужкою
+                    const lastBracket = stack.pop();
+
+                    // Перевірте, чи відповідна відкривна дужка знаходиться на вершині стека
+                    if (bracketPairs[lastBracket] !== char) {
+                        return false;
+                    }
+                }
+            }
+
+            // Якщо стек порожній, усі дужки попарно правильно
+            return stack.length === 0;
+        }
+    </script>
+</body>
+</html>

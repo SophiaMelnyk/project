@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання №9</title>
+</head>
+<body>
+    <script>
+        const tweets = [
+            { id: "000", likes: 5, tags: ["js", "nodejs"] },
+            { id: "001", likes: 2, tags: ["html", "css"] },
+            { id: "002", likes: 17, tags: ["html", "js", "nodejs"] },
+            { id: "003", likes: 8, tags: ["css", "react"] },
+            { id: "004", likes: 0, tags: ["js", "nodejs", "react"] },
+        ];
+        
+        function countTags(tweets) {
+            const tagCount = {};
+            
+            tweets.forEach((tweet) => {
+                tweet.tags.forEach((tag) => {
+                    tagCount[tag] = (tagCount[tag] || 0) + 1;
+                });
+            });
+            
+            return tagCount;
+        }
+        
+        const result = countTags(tweets);
+        
+        // Вивести результат на сторінку
+        const resultContainer = document.createElement("div");
+        resultContainer.innerHTML = "<h2>Кількість тегів</h2><pre>" + JSON.stringify(result, null, 2) + "</pre>";
+        document.body.appendChild(resultContainer);
+        </script>
+</body>
+</html>

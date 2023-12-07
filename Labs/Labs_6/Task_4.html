@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Завдання №4</title>
+</head>
+<body>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const concerts = {
+                Київ: new Date("2020-04-01"),
+                Умань: new Date("2025-07-02"),
+                Вінниця: new Date("2020-04-21"),
+                Одеса: new Date("2025-03-15"),
+                Хмельницький: new Date("2020-04-18"),
+                Харків: new Date("2025-07-10"),
+            };
+            
+            // Отримати масив імен міст
+            const cityNames = Object.keys(concerts);
+            
+            // Отримати поточну дату
+            const currentDate = new Date();
+            
+            // Відфільтрувати міста, в яких концерт уже пройшов
+            const upcomingCities = cityNames.filter(city => concerts[city] > currentDate);
+            
+            // Відсортувати міста у хронологічному порядку
+            const sortedCities = upcomingCities.sort((a, b) => concerts[a] - concerts[b]);
+            
+            // Вивести усі міста та дати концертів
+            console.log("Усі міста та дати концертів:");
+            cityNames.forEach(city => {
+                console.log(`${city}: ${concerts[city].toLocaleDateString()}`);
+            });
+            
+            // Вивести результат
+            console.log("\nВідсортовані міста у хронологічному порядку:");
+            console.log(sortedCities);
+            
+            // Додати результат на сторінку HTML
+            const resultContainer = document.createElement('div');
+            resultContainer.innerHTML = `
+            <h2>Усі міста та дати концертів:</h2>
+            <ul>
+                ${cityNames.map(city => `<li>${city}: ${concerts[city].toLocaleDateString()}</li>`).join('')}
+            </ul>
+            <h2>Відсортовані міста у хронологічному порядку:</h2>
+            <ul>
+                ${sortedCities.map(city => `<li>${city}</li>`).join('')}
+            </ul>
+            `;
+            document.body.appendChild(resultContainer);
+        });
+    </script>
+</body>
+</html>

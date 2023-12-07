@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Завдання №6</title>
+</head>
+<body>
+    <h2>Початкові ціни</h2>
+    <ul id="originalList"></ul>
+    
+    <h2>Ціни зі знижкою (для цін > 300)</h2>
+    <ul id="discountedList"></ul>
+    
+    <script>
+        const medicines = [
+            { id: 1, name: "Noshpa", price: 170 },
+            { id: 2, name: "Analgin", price: 55 },
+            { id: 3, name: "Quanil", price: 310 },
+            { id: 4, name: "Alphacholine", price: 390 },
+        ];
+        
+        function applyDiscount(meds) {
+            const originalList = document.getElementById('originalList');
+            const discountedList = document.getElementById('discountedList');
+            
+            // Показати оригінальні ціни
+            meds.forEach(med => {
+                const listItem = document.createElement('li');
+                listItem.textContent = `${med.name}: ${med.price} грн`;
+                originalList.appendChild(listItem);
+            });
+            
+            // Застосуємо знижку до цін > 300
+            const discountedMeds = meds.map(med => {
+                if (med.price > 300) {
+                    return { ...med, price: Math.round(med.price * 0.7) };
+                }
+                return med;
+            });
+            
+            // Показати ціни зі знижкою
+            discountedMeds.forEach(med => {
+                const listItem = document.createElement('li');
+                listItem.textContent = `${med.name}: ${med.price} грн`;
+                discountedList.appendChild(listItem);
+            });
+        }
+        
+        applyDiscount(medicines);
+    </script>
+</body>
+</html>

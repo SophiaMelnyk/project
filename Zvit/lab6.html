@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота №6</title>
+    <link rel="icon" href="images/study.png">
+    <link rel="stylesheet" href="styles/styles.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const topicButton = document.getElementById("topicButton");
+
+            const task2_Button = document.getElementById("task2_Button");
+            const task4_Button = document.getElementById("task4_Button");
+            const task6_Button = document.getElementById("task6_Button");
+            const task8_Button = document.getElementById("task8_Button");
+            const task9_Button = document.getElementById("task9_Button");
+            const task10_Button = document.getElementById("task10_Button");
+
+            const conclusionButton = document.getElementById("conclusionButton");
+            const content = document.querySelector(".content");
+            
+            topicButton.addEventListener("click", function () {
+                content.innerHTML = '<h3>Тема:</h3><p>Об\'\єкт. Методи об\'\єкта. Масив об\'\єктів. Деструктуризація об\'\єктів. Callback. Стрілочні функції. Стрілочні функції як колбеки.</p>' +
+                '<h3>Мета:</h3><p>Придбати практичні навички роботи з об\'\єктами. Методи об\'\єкта. Callback. Стрілочні функції. Стрілочні функції як колбеки. Реалізація програм засовами мови JavaScript.</p>' +
+                '<h3>Посилання на проєкт:</h3><a href="https://github.com/SophiaMelnyk/project.git" target="_blank">Посилання на проєкт</a>';
+            });
+            
+            task2_Button.addEventListener("click", function () {
+                content.innerHTML = '<h3>Завдання №2</h3>' +
+                '<img src="images/lab6_task2.png" alt="Умова завдання">' +
+                '<h4>Результат виконання</h4>' +
+                    '<img src="images/lab6_task2_result.png" alt="Результат виконання">' +
+                '<h4>Код</h4>'+
+                    '<img src="images/lab6_task2_code.png" alt="Код">';
+            });
+
+            task4_Button.addEventListener("click", function () {
+                content.innerHTML = '<h3>Завдання №4</h3>' +
+                '<img src="images/lab6_task4.png" alt="Умова завдання">' +
+                '<h4>Результат виконання</h4>' +
+                    '<img src="images/lab6_task4_result.png" alt="Результат виконання">' +
+                '<h4>Код</h4>'+
+                    '<img src="images/lab6_task4_code.png" alt="Код">';
+            });
+
+            task6_Button.addEventListener("click", function () {
+                content.innerHTML = '<h3>Завдання №6</h3>' +
+                '<img src="images/lab6_task6.png" alt="Умова завдання">' +
+                '<h4>Результат виконання</h4>' +
+                    '<img src="images/lab6_task6_result.png" alt="Результат виконання">' +
+                '<h4>Код</h4>'+
+                    '<img src="images/lab6_task6_code.png" alt="Код">';
+            });
+
+            task8_Button.addEventListener("click", function () {
+                content.innerHTML = '<h3>Завдання №8</h3>' +
+                '<img src="images/lab6_task8.png" alt="Умова завдання">' +
+                '<h4>Результат виконання</h4>' +
+                    '<img src="images/lab6_task8_result.png" alt="Результат виконання">' +
+                '<h4>Код</h4>'+
+                    '<img src="images/lab6_task8_code.png" alt="Код">';
+            });
+
+            task9_Button.addEventListener("click", function () {
+                content.innerHTML = '<h3>Завдання №9</h3>' +
+                '<img src="images/lab6_task9.png" alt="Умова завдання">' +
+                '<h4>Результат виконання</h4>' +
+                    '<img src="images/lab6_task9_result.png" alt="Результат виконання">' +
+                '<h4>Код</h4>'+
+                    '<img src="images/lab6_task9_code.png" alt="Код">';
+            });
+
+            task10_Button.addEventListener("click", function () {
+                content.innerHTML = '<h3>Завдання №10</h3>' +
+                '<img src="images/lab6_task10.png" alt="Умова завдання">' +
+                '<h4>Результат виконання</h4>' +
+                    '<img src="images/lab6_task10_result1.png" style="width: 1000px;" alt="Результат виконання">' +
+                    '<img src="images/lab6_task10_result2.png" style="width: 1000px;" alt="Результат виконання">' +
+                '<h4>Код</h4>'+
+                    '<img src="images/lab6_task10_code.png" alt="Код">';
+            });
+
+            conclusionButton.addEventListener("click", function () {
+                content.innerHTML = '<h3>Висновок</h3>' +
+                '<img src="images/vusnovok_6.png" alt="Висновок">';
+            });
+        });
+      </script>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <div>
+                <h2>ЗВІТИ З ЛАБОРАТОРНИХ РОБІТ<br>З ДИСЦИПЛІНИ «ІНТЕРНЕТ-ТЕХНОЛОГІЇ та ПРОЕКТУВАННЯ WEB-ЗАСТОСУВАНЬ»</h2>
+                <p><strong>Студент групи ІС-21</strong><br>Мельник Софія Василівна</p>
+            </div>
+            <img id="student" src="images/student_photo.jpg" alt="Фото студента">
+        </div>
+        <hr>
+        <div class="button-labs">
+            <button class="button"><a href="lab1.html">Лабораторна робота №1</a></button>
+            <button class="button"><a href="lab2.html">Лабораторна робота №2</a></button>
+            <button class="button"><a href="lab3.html">Лабораторна робота №3</a></button>
+            <button class="button"><a href="lab4.html">Лабораторна робота №4</a></button>
+            <button class="button"><a href="lab5.html">Лабораторна робота №5</a></button>
+            <button class="button"><a href="lab6.html">Лабораторна робота №6</a></button>
+            <button class="button"><a href="lab7.html">Лабораторна робота №7</a></button>
+            <button class="button"><a href="lab8.html">Лабораторна робота №8</a></button>
+            <button class="button"><a href="lab9.html">Лабораторна робота №9</a></button>
+        </div>        
+        <hr>
+        <h3>ЛАБОРАТОРНА РОБОТА №6</h3>
+    </header>
+    <main>
+        <div class="button-container">
+            <button id="topicButton">Тема, мета, місце розташування сайту та звіту</button>
+
+            <button id="task2_Button">Завдання №2</button>
+            <button id="task4_Button">Завдання №4</button>
+            <button id="task6_Button">Завдання №6</button>
+            <button id="task8_Button">Завдання №8</button>
+            <button id="task9_Button">Завдання №9</button>
+            <button id="task10_Button">Завдання №10</button>
+
+            <button id="conclusionButton">Висновок</button>
+        </div>
+        <div class="content">
+
+        </div>
+    </main>
+</body>
+</html>

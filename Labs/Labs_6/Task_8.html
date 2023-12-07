@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання №8</title>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+    }
+    </style>
+</head>
+<body>
+    <h1>Управління товарним складом</h1>
+    
+    <div id="app">
+        <ul id="itemList"></ul>
+        <div>
+            <input type="text" id="addItemInput" placeholder="Введіть товар">
+            <button onclick="addItem()">Додати товар</button>
+        </div>
+        <div>
+            <input type="text" id="removeItemInput" placeholder="Введіть товар для видалення">
+            <button onclick="removeItem()">Видалити товар</button>
+        </div>
+    </div>
+
+    <script>
+        // Функція конструктора зберігання
+        function Storage(initialItems) {
+            this.items = initialItems || [];
+            
+            this.getItems = function () {
+                return this.items;
+            };
+            
+            this.addItems = function (item) {
+                this.items.push(item);
+            };
+            
+            this.removeItem = function (item) {
+                const index = this.items.indexOf(item);
+                if (index !== -1) {
+                    this.items.splice(index, 1);
+                }
+            };
+        }
+        
+        // Створення екземпляра Storage з початковими елементами
+        const initialItems = ["apple", "banana", "mango"];
+        const warehouse = new Storage(initialItems);
+        
+        // Функція для оновлення інтерфейсу користувача поточними елементами
+        function updateItemList() {
+            const itemListElement = document.getElementById("itemList");
+            itemListElement.innerHTML = "";
+            warehouse.getItems().forEach(item => {
+                const li = document.createElement("li");
+                li.textContent = item;
+                itemListElement.appendChild(li);
+            });
+        }
+        
+        // Функція додавання товару на склад
+        function addItem() {
+            const addItemInput = document.getElementById("addItemInput");
+            const newItem = addItemInput.value.trim();
+            if (newItem !== "") {
+                warehouse.addItems(newItem);
+                updateItemList();
+                addItemInput.value = "";
+            }
+        }
+        
+        // Функція видалення товару зі складу
+        function removeItem() {
+            const removeItemInput = document.getElementById("removeItemInput");
+            const itemToRemove = removeItemInput.value.trim();
+            if (itemToRemove !== "") {
+                warehouse.removeItem(itemToRemove);
+                updateItemList();
+                removeItemInput.value = "";
+            }
+        }
+        
+        // Початкове оновлення інтерфейсу користувача
+        updateItemList();
+        </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання №2</title>
+</head>
+<body>
+    <h1>Інформація про товари</h1>
+    <label for="productId">ID товару:</label>
+    <input type="text" id="productId">
+    <button onclick="fetchProductDetails()">Отримати дані</button>
+    <p id="result"></p>
+
+    <script>
+        function getProductDetails(productId, successCallback, errorCallback) {
+            // Припустимо, що у нас є об'єкт, який містить дані товарів
+            const productData = {
+                '123': { name: 'Товар 1', price: 19.99 },
+                '456': { name: 'Товар 2', price: 29.99 },
+            };
+            
+            // Спробуємо знайти товар за вказаним ідентифікатором
+            const product = productData[productId];
+            
+            if (product) {
+                // Якщо товар знайдено, викликаємо успішний колбек і передаємо деталі товару
+                successCallback(`Назва товару: ${product.name}, Ціна: ${product.price}`);
+            } else {
+                // Якщо товар не знайдено, викликаємо колбек помилки і передаємо відповідне повідомлення
+                errorCallback('Товару не знайдено!');
+            }
+        }
+        
+        function fetchProductDetails() {
+            const productId = document.getElementById('productId').value;
+            const resultElement = document.getElementById('result');
+            
+            // Функції-колбеки для успіху та помилки
+            const successCallback = (details) => {
+                resultElement.textContent = `Результат: ${details}`;
+            };
+            
+            const errorCallback = (error) => {
+                resultElement.textContent = `Помилка: ${error}`;
+            };
+            
+            // Викликаємо функцію getProductDetails з введеним productId та колбеками
+            getProductDetails(productId, successCallback, errorCallback);
+        }
+    </script>
+</body>
+</html>
