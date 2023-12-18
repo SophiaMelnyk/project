@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання №8</title>
+</head>
+<body>
+    <h2>Завдання №8</h2>
+
+    <form class="login-form">
+        <label>
+            Email
+            <input type="email" name="email" />
+        </label>
+        <label>
+            Password
+            <input type="password" name="password" />
+        </label>
+        <button type="submit">Log in</button>
+    </form>
+
+    <script>
+        document.querySelector('.login-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Зупиняє перезавантаження сторінки при відправленні форми
+
+            var emailInput = this.elements.email;
+            var passwordInput = this.elements.password;
+
+            // Перевірка на пусті поля
+            if (!emailInput.value.trim() || !passwordInput.value.trim()) {
+                alert('All form fields must be filled in');
+                return;
+            }
+
+            // Збираємо значення полів у об'єкт
+            var formData = {
+                email: emailInput.value.trim(),
+                password: passwordInput.value.trim()
+            };
+
+            // Виводимо об'єкт у консоль
+            console.log(formData);
+
+            // Очищаємо значення полів форми
+            this.reset();
+        });
+    </script>
+
+</body>
+</html>

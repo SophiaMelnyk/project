@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання №6</title>
+</head>
+<body>
+    <h2>Завдання №6</h2>
+    
+    <ul id="numberList">
+        <li>1</li>
+        <li>4</li>
+        <li>8</li>
+        <li>16</li>
+        <li>20</li>
+        <li>30</li>
+    </ul>
+    
+    <button onclick="doubleValues()">Подвоїти</button>
+
+    <script>
+        function doubleValues() {
+            var listItems = document.querySelectorAll('#numberList li');
+
+            listItems.forEach(function (item) {
+                var currentValue = parseInt(item.textContent, 10);
+                item.textContent = currentValue * currentValue;
+            });
+        }
+    </script>
+
+</body>
+</html>

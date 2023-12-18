@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання №9</title>
+</head>
+<body>
+    <h2>Завдання №9</h2>
+
+    <div class="widget">
+        <p>Background color: <span class="color">-</span></p>
+        <button type="button" class="change-color">Change color</button>
+    </div>
+
+    <script>
+        function getRandomHexColor() {
+            return `#${Math.floor(Math.random() * 16777215)
+                .toString(16)
+                .padStart(6, '0')}`;
+        }
+
+        document.querySelector('.change-color').addEventListener('click', function() {
+            var newColor = getRandomHexColor();
+            
+            // Задаємо новий колір фону для body
+            document.body.style.backgroundColor = newColor;
+
+            // Оновлюємо текстовий вміст span.color
+            document.querySelector('.color').textContent = newColor;
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завдання №4</title>
+    <style>
+        #square {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Завдання №4</h2>
+    
+    <div id="square"></div>
+    
+    <button onclick="resizeSquare('decrease')">Зменшити</button>
+    <button onclick="resizeSquare('increase')">Збільшити</button>
+
+    <script>
+        var squareSize = 100;
+
+        function resizeSquare(action) {
+            var square = document.getElementById('square');
+            
+            if (action === 'decrease') {
+                squareSize -= 15;
+            } else if (action === 'increase') {
+                squareSize += 15;
+            }
+
+            square.style.width = squareSize + 'px';
+            square.style.height = squareSize + 'px';
+        }
+    </script>
+
+</body>
+</html>
